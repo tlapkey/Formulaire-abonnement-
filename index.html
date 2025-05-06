@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Inscription Web3Forms</title>
+  <Style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f2f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .form-box {
+      background: #fff;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      max-width: 500px;
+      width: 100%;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .input-group {
+      margin-bottom: 15px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-size: 14px;
+      color: #555;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 16px;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #28a745;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #218838;
+    }
+
+    .footer {
+      margin-top: 15px;
+      font-size: 12px;
+      color: #888;
+      text-align: center;
+    }
+  </Style>
+</head>
+<body>
+  <div class="form-box">
+    <h2>Formulaire d'inscription</h2>
+
+    <form action="https://api.web3forms.com/submit" method="POST">
+      <!-- Web3Forms Configuration -->
+      <input type="hidden" name="access_key" value="716d882c-b4c6-4ae8-a5dd-08c1d683fc50">
+      <input type="hidden" name="subject" value="Nouvelle inscription">
+      <input type="hidden" name="from_name" value="MonApp">
+      <input type="hidden" name="redirect" value="https://votre-site.com/merci.html">
+
+      <!-- Champs requis -->
+      <div class="input-group">
+        <label for="prenom">Nom d'utilisateur</label>
+        <input type="text" id="prenom" name="prenom" required placeholder="Ex:TLAP">
+      </div>
+
+      <div class="input-group">
+        <label for="nom">Réseau</label>
+        <input type="text" id="nom" name="nom" required placeholder="Ex:1-MOOV 2-MTN(Miscrosoft teams)">
+      </div>
+
+      <div class="input-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required placeholder="bite@gmail.com">
+      </div>
+
+      <div class="input-group">
+        <label for="telephone">Téléphone</label>
+        <input type="tel" id="telephone" name="telephone" required placeholder="Ex : +225...">
+      </div>
+
+      <div class="input-group">
+        <label for="naissance">Date d'émission </label>
+        <input type="date" id="emission" name="emission" required>
+      </div>
+
+      <div class="input-group">
+        <label for="Durée">Durée</label>
+        <input type="text" id="De" name="Durée" required placeholder="Ex: une semaine ,1mois ">
+      </div>
+
+     
+
+      <button type="submit">S'inscrire</button>
+    </form>
+
+    <div class="footer">
+      Propulsé par Web3Forms – Aucune base de données nécessaire.
+    </div>
+  </div>
+</body>
+</html>
